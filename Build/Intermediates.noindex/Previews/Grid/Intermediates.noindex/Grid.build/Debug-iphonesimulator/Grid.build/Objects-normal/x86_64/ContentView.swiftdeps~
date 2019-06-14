@@ -22,7 +22,6 @@ depends-top-level:
 - !private "..<"
 - !private "/"
 - !private ">="
-- !private "??"
 - "AssignmentPrecedence"
 - !private "CGFloat"
 - "ClosedRange"
@@ -37,9 +36,11 @@ depends-top-level:
 - "IntegerLiteralType"
 - "Length"
 - "PreviewProvider"
+- !private "Spacer"
 - "StringLiteralType"
 - "TernaryPrecedence"
 - !private "Text"
+- !private "UIScreen"
 - !private "VStack"
 - "View"
 - "ViewBuilder"
@@ -47,23 +48,31 @@ depends-top-level:
 depends-member:
 - !private ["s18AdditiveArithmeticP", "infinity"]
 - !private ["s18AdditiveArithmeticP", "init"]
+- !private ["7SwiftUI10AnimatableP", "width"]
 - !private ["SK", "count"]
 - !private ["SB", "infinity"]
 - !private ["SB", "init"]
 - !private ["12CoreGraphics7CGFloatV", "infinity"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So6CGRectV", "width"]
+- !private ["s7CVarArgP", "bounds"]
 - !private ["s7CVarArgP", "infinity"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
 - !private ["SN", "count"]
 - !private ["Sl", "count"]
 - !private ["7SwiftUI5ColorV", "green"]
 - !private ["SL", "infinity"]
 - !private ["SL", "init"]
 - ["4Grid11ContentViewV", "Body"]
+- !private ["4Grid11ContentViewV", "CGFloat"]
 - !private ["4Grid11ContentViewV", "Color"]
 - !private ["4Grid11ContentViewV", "ForEach"]
 - !private ["4Grid11ContentViewV", "GridView"]
+- ["4Grid11ContentViewV", "Int"]
+- ["4Grid11ContentViewV", "Length"]
 - !private ["4Grid11ContentViewV", "Text"]
+- !private ["4Grid11ContentViewV", "UIScreen"]
 - ["4Grid11ContentViewV", "View"]
 - ["4Grid11ContentViewV", "_Default_Body"]
 - ["4Grid11ContentViewV", "_makeView"]
@@ -72,6 +81,9 @@ depends-member:
 - ["4Grid11ContentViewV", "body"]
 - ["4Grid11ContentViewV", "deinit"]
 - ["4Grid11ContentViewV", "init"]
+- ["4Grid11ContentViewV", "itemHeight"]
+- ["4Grid11ContentViewV", "numberOfColumns"]
+- ["4Grid11ContentViewV", "spacing"]
 - !private ["4Grid20ContentView_PreviewsV", "ContentView"]
 - ["4Grid20ContentView_PreviewsV", "Previews"]
 - ["4Grid20ContentView_PreviewsV", "View"]
@@ -82,30 +94,40 @@ depends-member:
 - ["4Grid20ContentView_PreviewsV", "init"]
 - ["4Grid20ContentView_PreviewsV", "platform"]
 - ["4Grid20ContentView_PreviewsV", "previews"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "infinity"]
 - !private ["s28CustomDebugStringConvertibleP", "largeTitle"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "infinity"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "largeTitle"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "infinity"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
 - !private ["Se", "count"]
 - !private ["Se", "infinity"]
 - !private ["Se", "init"]
 - !private ["Se", "largeTitle"]
+- !private ["Se", "width"]
 - !private ["7SwiftUI18DynamicViewContentP", "background"]
 - !private ["7SwiftUI18DynamicViewContentP", "content"]
 - !private ["7SwiftUI18DynamicViewContentP", "data"]
+- !private ["7SwiftUI18DynamicViewContentP", "frame"]
 - !private ["7SwiftUI18DynamicViewContentP", "init"]
 - !private ["SE", "count"]
 - !private ["SE", "infinity"]
 - !private ["SE", "init"]
 - !private ["SE", "largeTitle"]
+- !private ["SE", "width"]
 - !private ["SQ", "background"]
+- !private ["SQ", "bounds"]
 - !private ["SQ", "center"]
 - !private ["SQ", "count"]
 - !private ["SQ", "font"]
@@ -114,6 +136,9 @@ depends-member:
 - !private ["SQ", "infinity"]
 - !private ["SQ", "init"]
 - !private ["SQ", "largeTitle"]
+- !private ["SQ", "main"]
+- !private ["SQ", "top"]
+- !private ["SQ", "width"]
 - !private ["s25ExpressibleByFloatLiteralP", "infinity"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "infinity"]
@@ -129,12 +154,12 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "infinity"]
 - !private ["7SwiftUI7GestureP", "largeTitle"]
 - ["4Grid0A4ViewV", "Body"]
-- !private ["4Grid0A4ViewV", "CGFloat"]
 - ["4Grid0A4ViewV", "ClosedRange"]
 - ["4Grid0A4ViewV", "ForEach"]
 - !private ["4Grid0A4ViewV", "HStack"]
 - ["4Grid0A4ViewV", "Int"]
 - ["4Grid0A4ViewV", "Length"]
+- !private ["4Grid0A4ViewV", "Spacer"]
 - !private ["4Grid0A4ViewV", "Text"]
 - !private ["4Grid0A4ViewV", "VStack"]
 - ["4Grid0A4ViewV", "View"]
@@ -144,24 +169,26 @@ depends-member:
 - ["4Grid0A4ViewV", "_makeViewList"]
 - ["4Grid0A4ViewV", "_visitViewType"]
 - ["4Grid0A4ViewV", "body"]
-- !private ["4Grid0A4ViewV", "calculatedItemSize"]
 - ["4Grid0A4ViewV", "columns"]
 - !private ["4Grid0A4ViewV", "content"]
 - ["4Grid0A4ViewV", "deinit"]
-- ["4Grid0A4ViewV", "estimatedItemSize"]
 - ["4Grid0A4ViewV", "init"]
 - !private ["4Grid0A4ViewV", "max"]
-- !private ["4Grid0A4ViewV", "padding"]
 - !private ["4Grid0A4ViewV", "rowCount"]
 - ["4Grid0A4ViewV", "spacing"]
-- !private ["7SwiftUI6HStackV", "frame"]
 - !private ["7SwiftUI6HStackV", "init"]
+- !private ["SH", "bounds"]
 - !private ["SH", "count"]
 - !private ["SH", "green"]
 - !private ["SH", "infinity"]
 - !private ["SH", "init"]
 - !private ["SH", "largeTitle"]
+- !private ["SH", "main"]
 - !private ["7SwiftUI19HorizontalAlignmentV", "center"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "main"]
 - !private ["Sj", "infinity"]
 - !private ["Sj", "init"]
 - !private ["Sq", "infinity"]
@@ -184,28 +211,33 @@ depends-member:
 - !private ["7SwiftUI10ShapeStyleP", "green"]
 - !private ["s13SignedNumericP", "infinity"]
 - !private ["s13SignedNumericP", "init"]
+- !private ["7SwiftUI6SpacerV", "init"]
 - !private ["Sx", "infinity"]
 - !private ["Sx", "init"]
 - !private ["7SwiftUI18LocalizedStringKeyV0D13InterpolationV", "appendInterpolation"]
 - !private ["7SwiftUI18LocalizedStringKeyV0D13InterpolationV", "appendLiteral"]
 - !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - !private ["s27StringInterpolationProtocolP", "appendLiteral"]
-- !private ["7SwiftUI4TextV", "background"]
 - !private ["7SwiftUI4TextV", "font"]
 - !private ["7SwiftUI4TextV", "frame"]
 - !private ["7SwiftUI4TextV", "init"]
-- !private ["7SwiftUI6VStackV", "frame"]
+- !private ["So8UIScreenC", "bounds"]
+- !private ["So8UIScreenC", "main"]
+- !private ["So18UITraitEnvironmentP", "bounds"]
+- !private ["So18UITraitEnvironmentP", "main"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI16VectorArithmeticP", "infinity"]
 - !private ["7SwiftUI16VectorArithmeticP", "init"]
-- !private ["7SwiftUI17VerticalAlignmentV", "center"]
+- !private ["7SwiftUI17VerticalAlignmentV", "top"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "CGFloat"]
 - !private ["7SwiftUI4ViewP", "Color"]
 - !private ["7SwiftUI4ViewP", "ForEach"]
 - !private ["7SwiftUI4ViewP", "GridView"]
 - !private ["7SwiftUI4ViewP", "HStack"]
+- !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
+- !private ["7SwiftUI4ViewP", "UIScreen"]
 - !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
@@ -214,34 +246,39 @@ depends-member:
 - ["7SwiftUI4ViewP", "_visitViewType"]
 - !private ["7SwiftUI4ViewP", "background"]
 - ["7SwiftUI4ViewP", "body"]
-- !private ["7SwiftUI4ViewP", "calculatedItemSize"]
 - !private ["7SwiftUI4ViewP", "columns"]
 - !private ["7SwiftUI4ViewP", "content"]
 - !private ["7SwiftUI4ViewP", "data"]
-- !private ["7SwiftUI4ViewP", "estimatedItemSize"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "green"]
 - !private ["7SwiftUI4ViewP", "infinity"]
 - !private ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "itemHeight"]
 - !private ["7SwiftUI4ViewP", "largeTitle"]
 - !private ["7SwiftUI4ViewP", "max"]
-- !private ["7SwiftUI4ViewP", "padding"]
+- !private ["7SwiftUI4ViewP", "numberOfColumns"]
 - !private ["7SwiftUI4ViewP", "rowCount"]
 - !private ["7SwiftUI4ViewP", "spacing"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI12ViewModifierP", "background"]
+- !private ["7SwiftUI12ViewModifierP", "frame"]
 - !private ["s15_CVarArgAlignedP", "infinity"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "infinity"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["7SwiftUI18_FormatSpecifiableP", "infinity"]
 - !private ["7SwiftUI18_FormatSpecifiableP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["7SwiftUI16_ModifiedContentV", "background"]
+- !private ["7SwiftUI16_ModifiedContentV", "frame"]
 - !private ["s21_ObjectiveCBridgeableP", "infinity"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "largeTitle"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["7SwiftUI16_PreviewProviderP", "ContentView"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - ["7SwiftUI16_PreviewProviderP", ""]
@@ -250,7 +287,6 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "_previews"]
 - ["7SwiftUI16_PreviewProviderP", "platform"]
 - ["7SwiftUI16_PreviewProviderP", "previews"]
-- !private ["7SwiftUI10_UnaryViewP", "background"]
 - !private ["7SwiftUI10_UnaryViewP", "font"]
 - !private ["7SwiftUI10_UnaryViewP", "frame"]
 - !private ["7SwiftUI10_UnaryViewP", "green"]
@@ -261,7 +297,9 @@ depends-member:
 - !private ["7SwiftUI5_ViewP", "ForEach"]
 - !private ["7SwiftUI5_ViewP", "GridView"]
 - !private ["7SwiftUI5_ViewP", "HStack"]
+- !private ["7SwiftUI5_ViewP", "Spacer"]
 - !private ["7SwiftUI5_ViewP", "Text"]
+- !private ["7SwiftUI5_ViewP", "UIScreen"]
 - !private ["7SwiftUI5_ViewP", "VStack"]
 - ["7SwiftUI5_ViewP", ""]
 - ["7SwiftUI5_ViewP", "_Default_Body"]
@@ -270,26 +308,27 @@ depends-member:
 - ["7SwiftUI5_ViewP", "_visitViewType"]
 - !private ["7SwiftUI5_ViewP", "background"]
 - ["7SwiftUI5_ViewP", "body"]
-- !private ["7SwiftUI5_ViewP", "calculatedItemSize"]
 - !private ["7SwiftUI5_ViewP", "columns"]
 - !private ["7SwiftUI5_ViewP", "content"]
 - !private ["7SwiftUI5_ViewP", "data"]
-- !private ["7SwiftUI5_ViewP", "estimatedItemSize"]
 - !private ["7SwiftUI5_ViewP", "font"]
 - !private ["7SwiftUI5_ViewP", "frame"]
 - !private ["7SwiftUI5_ViewP", "green"]
 - !private ["7SwiftUI5_ViewP", "infinity"]
 - !private ["7SwiftUI5_ViewP", "init"]
+- !private ["7SwiftUI5_ViewP", "itemHeight"]
 - !private ["7SwiftUI5_ViewP", "largeTitle"]
 - !private ["7SwiftUI5_ViewP", "max"]
-- !private ["7SwiftUI5_ViewP", "padding"]
+- !private ["7SwiftUI5_ViewP", "numberOfColumns"]
 - !private ["7SwiftUI5_ViewP", "rowCount"]
 - !private ["7SwiftUI5_ViewP", "spacing"]
 depends-nominal:
 - !private "s18AdditiveArithmeticP"
+- !private "7SwiftUI10AnimatableP"
 - !private "SK"
 - !private "SB"
 - !private "12CoreGraphics7CGFloatV"
+- !private "So6CGRectV"
 - !private "s7CVarArgP"
 - !private "SN"
 - !private "Sl"
@@ -315,6 +354,8 @@ depends-nominal:
 - !private "7SwiftUI6HStackV"
 - !private "SH"
 - !private "7SwiftUI19HorizontalAlignmentV"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
 - !private "Sj"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
@@ -325,10 +366,13 @@ depends-nominal:
 - !private "ST"
 - !private "7SwiftUI10ShapeStyleP"
 - !private "s13SignedNumericP"
+- !private "7SwiftUI6SpacerV"
 - !private "Sx"
 - !private "7SwiftUI18LocalizedStringKeyV0D13InterpolationV"
 - !private "s27StringInterpolationProtocolP"
 - !private "7SwiftUI4TextV"
+- !private "So8UIScreenC"
+- !private "So18UITraitEnvironmentP"
 - !private "7SwiftUI6VStackV"
 - !private "7SwiftUI16VectorArithmeticP"
 - !private "7SwiftUI17VerticalAlignmentV"
@@ -337,7 +381,9 @@ depends-nominal:
 - !private "7SwiftUI12ViewModifierP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "7SwiftUI18_FormatSpecifiableP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "7SwiftUI16_ModifiedContentV"
 - !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
@@ -1498,4 +1544,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "35c70b452282a11ab66b040ce55fa871"
+interface-hash: "f05d63d213998a540e2d4ccf7923ff97"

@@ -10,17 +10,24 @@ import SwiftUI
 
 struct ContentView : View {
     
+    var numberOfColumns:Int = 4
+    var spacing:Length = 5
+    var itemHeight:Length {
+        (UIScreen.main.bounds.width - (spacing * (CGFloat(numberOfColumns)-1))) / CGFloat(numberOfColumns)
+    }
+    
     var body: some View {
-        
-        GridView (columns: 3, spacing: 5) {
+
+        GridView (columns: numberOfColumns, spacing: spacing) {
             ForEach(1...11) { number in
                 Text("\(number+1)")
                     .font(.largeTitle)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .frame(minWidth: 0, maxWidth: .infinity,
+                           minHeight: self.itemHeight, maxHeight: self.itemHeight)
                     .background(Color.green)
             }
-        }.padding()
-        
+        }
+
     }
 }
 
@@ -42,36 +49,33 @@ struct GridView<Content> : View where Content:View {
         // Calculate row count based on items vs columns and remaining items
         rowCount = (max(self.content.data.count, columns) / columns) + ((self.content.data.count % columns) != 0 ? 1 : 0)
 
-        //print ("Row count of \(rowCount) needed for \(self.content.data.count) items.")
+        print ("Row count of \(rowCount) needed for \(self.content.data.count) items.")
 
     }
 
     var body : some View {
-        
         VStack(alignment: .center, spacing: self.spacing) {
             
             ForEach(0..<rowCount) { rowIndex in
                 
-                HStack (alignment: .center, spacing: self.spacing) {
+                HStack (alignment: .top, spacing: self.spacing) {
                     
                     ForEach((rowIndex * self.columns)..<(rowIndex * self.columns) + self.columns) { itemIndex in
                         if itemIndex >= self.content.data.count {
                             Text("")
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0)
                             
                         } else {
                             self.content.content(itemIndex)
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0)
                         }
                     }
                     
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                }
                 
             }
-            
+            Spacer()
         }
-        .frame(minWidth:0, maxWidth: .infinity, minHeight:0, maxHeight: .infinity)
-        
     }
     
 }

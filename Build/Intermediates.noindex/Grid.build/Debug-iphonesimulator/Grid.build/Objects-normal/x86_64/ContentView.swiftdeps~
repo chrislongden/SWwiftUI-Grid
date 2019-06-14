@@ -22,7 +22,6 @@ depends-top-level:
 - !private "..<"
 - !private "/"
 - !private ">="
-- !private "??"
 - "AssignmentPrecedence"
 - !private "CGFloat"
 - "ClosedRange"
@@ -37,6 +36,7 @@ depends-top-level:
 - "IntegerLiteralType"
 - "Length"
 - "PreviewProvider"
+- !private "Spacer"
 - "StringLiteralType"
 - "TernaryPrecedence"
 - !private "Text"
@@ -80,8 +80,9 @@ depends-member:
 - ["4Grid11ContentViewV", "body"]
 - ["4Grid11ContentViewV", "deinit"]
 - ["4Grid11ContentViewV", "init"]
-- ["4Grid11ContentViewV", "itemSize"]
+- ["4Grid11ContentViewV", "itemHeight"]
 - ["4Grid11ContentViewV", "numberOfColumns"]
+- ["4Grid11ContentViewV", "spacing"]
 - !private ["4Grid20ContentView_PreviewsV", "ContentView"]
 - ["4Grid20ContentView_PreviewsV", "Previews"]
 - ["4Grid20ContentView_PreviewsV", "View"]
@@ -135,6 +136,7 @@ depends-member:
 - !private ["SQ", "init"]
 - !private ["SQ", "largeTitle"]
 - !private ["SQ", "main"]
+- !private ["SQ", "top"]
 - !private ["SQ", "width"]
 - !private ["s25ExpressibleByFloatLiteralP", "infinity"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
@@ -151,12 +153,12 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "infinity"]
 - !private ["7SwiftUI7GestureP", "largeTitle"]
 - ["4Grid0A4ViewV", "Body"]
-- !private ["4Grid0A4ViewV", "CGFloat"]
 - ["4Grid0A4ViewV", "ClosedRange"]
 - ["4Grid0A4ViewV", "ForEach"]
 - !private ["4Grid0A4ViewV", "HStack"]
 - ["4Grid0A4ViewV", "Int"]
 - ["4Grid0A4ViewV", "Length"]
+- !private ["4Grid0A4ViewV", "Spacer"]
 - !private ["4Grid0A4ViewV", "Text"]
 - !private ["4Grid0A4ViewV", "VStack"]
 - ["4Grid0A4ViewV", "View"]
@@ -166,16 +168,13 @@ depends-member:
 - ["4Grid0A4ViewV", "_makeViewList"]
 - ["4Grid0A4ViewV", "_visitViewType"]
 - ["4Grid0A4ViewV", "body"]
-- !private ["4Grid0A4ViewV", "calculatedItemSize"]
 - ["4Grid0A4ViewV", "columns"]
 - !private ["4Grid0A4ViewV", "content"]
 - ["4Grid0A4ViewV", "deinit"]
-- ["4Grid0A4ViewV", "estimatedItemSize"]
 - ["4Grid0A4ViewV", "init"]
 - !private ["4Grid0A4ViewV", "max"]
 - !private ["4Grid0A4ViewV", "rowCount"]
 - ["4Grid0A4ViewV", "spacing"]
-- !private ["7SwiftUI6HStackV", "frame"]
 - !private ["7SwiftUI6HStackV", "init"]
 - !private ["SH", "bounds"]
 - !private ["SH", "count"]
@@ -211,6 +210,7 @@ depends-member:
 - !private ["7SwiftUI10ShapeStyleP", "green"]
 - !private ["s13SignedNumericP", "infinity"]
 - !private ["s13SignedNumericP", "init"]
+- !private ["7SwiftUI6SpacerV", "init"]
 - !private ["Sx", "infinity"]
 - !private ["Sx", "init"]
 - !private ["7SwiftUI18LocalizedStringKeyV0D13InterpolationV", "appendInterpolation"]
@@ -224,17 +224,17 @@ depends-member:
 - !private ["So8UIScreenC", "main"]
 - !private ["So18UITraitEnvironmentP", "bounds"]
 - !private ["So18UITraitEnvironmentP", "main"]
-- !private ["7SwiftUI6VStackV", "frame"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI16VectorArithmeticP", "infinity"]
 - !private ["7SwiftUI16VectorArithmeticP", "init"]
-- !private ["7SwiftUI17VerticalAlignmentV", "center"]
+- !private ["7SwiftUI17VerticalAlignmentV", "top"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "CGFloat"]
 - !private ["7SwiftUI4ViewP", "Color"]
 - !private ["7SwiftUI4ViewP", "ForEach"]
 - !private ["7SwiftUI4ViewP", "GridView"]
 - !private ["7SwiftUI4ViewP", "HStack"]
+- !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "UIScreen"]
 - !private ["7SwiftUI4ViewP", "VStack"]
@@ -248,13 +248,12 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "columns"]
 - !private ["7SwiftUI4ViewP", "content"]
 - !private ["7SwiftUI4ViewP", "data"]
-- !private ["7SwiftUI4ViewP", "estimatedItemSize"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "green"]
 - !private ["7SwiftUI4ViewP", "infinity"]
 - !private ["7SwiftUI4ViewP", "init"]
-- !private ["7SwiftUI4ViewP", "itemSize"]
+- !private ["7SwiftUI4ViewP", "itemHeight"]
 - !private ["7SwiftUI4ViewP", "largeTitle"]
 - !private ["7SwiftUI4ViewP", "max"]
 - !private ["7SwiftUI4ViewP", "numberOfColumns"]
@@ -297,6 +296,7 @@ depends-member:
 - !private ["7SwiftUI5_ViewP", "ForEach"]
 - !private ["7SwiftUI5_ViewP", "GridView"]
 - !private ["7SwiftUI5_ViewP", "HStack"]
+- !private ["7SwiftUI5_ViewP", "Spacer"]
 - !private ["7SwiftUI5_ViewP", "Text"]
 - !private ["7SwiftUI5_ViewP", "UIScreen"]
 - !private ["7SwiftUI5_ViewP", "VStack"]
@@ -310,13 +310,12 @@ depends-member:
 - !private ["7SwiftUI5_ViewP", "columns"]
 - !private ["7SwiftUI5_ViewP", "content"]
 - !private ["7SwiftUI5_ViewP", "data"]
-- !private ["7SwiftUI5_ViewP", "estimatedItemSize"]
 - !private ["7SwiftUI5_ViewP", "font"]
 - !private ["7SwiftUI5_ViewP", "frame"]
 - !private ["7SwiftUI5_ViewP", "green"]
 - !private ["7SwiftUI5_ViewP", "infinity"]
 - !private ["7SwiftUI5_ViewP", "init"]
-- !private ["7SwiftUI5_ViewP", "itemSize"]
+- !private ["7SwiftUI5_ViewP", "itemHeight"]
 - !private ["7SwiftUI5_ViewP", "largeTitle"]
 - !private ["7SwiftUI5_ViewP", "max"]
 - !private ["7SwiftUI5_ViewP", "numberOfColumns"]
@@ -366,6 +365,7 @@ depends-nominal:
 - !private "ST"
 - !private "7SwiftUI10ShapeStyleP"
 - !private "s13SignedNumericP"
+- !private "7SwiftUI6SpacerV"
 - !private "Sx"
 - !private "7SwiftUI18LocalizedStringKeyV0D13InterpolationV"
 - !private "s27StringInterpolationProtocolP"
@@ -1543,4 +1543,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e0f52f0401f4bdbdff7668ad383e36eb"
+interface-hash: "724d7b85be677fab6478f1457a88a8b1"

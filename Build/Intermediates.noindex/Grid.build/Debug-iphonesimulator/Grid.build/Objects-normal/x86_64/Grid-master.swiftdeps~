@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.38.29 clang-1100.0.20.14)"
 options: "3a8cd6986a7db0be9f67d9243e94cf23"
-build_time: [1560506092, 81390000]
+build_time: [1560507091, 108517000]
 inputs:
   "/Users/chrislongden/Dropbox/Apps-Personal/iOS/Grid/Grid/AppDelegate.swift": [1560429087, 66138986]
   "/Users/chrislongden/Dropbox/Apps-Personal/iOS/Grid/Grid/SceneDelegate.swift": [1560429087, 84679220]
-  "/Users/chrislongden/Dropbox/Apps-Personal/iOS/Grid/Grid/ContentView.swift": [1560506091, 855262372]
+  "/Users/chrislongden/Dropbox/Apps-Personal/iOS/Grid/Grid/ContentView.swift": [1560507090, 837596599]
